@@ -18,6 +18,11 @@
   		<div class="copy-wrapper">
   		<h3>Each Gilson design feature is <strong>engineered with intention and precision</strong> to give you a <strong>heightened experience</strong> while <strong>cruising the mountain</strong>.</h3>
   		</div>
+  		<div class="board-outlines">
+  		<img src="images/board-outlines-vertical_am.svg">
+  		<img src="images/board-outlines-vertical_park.svg">
+  		<img src="images/board-outlines-vertical_fly.svg">
+  		</div>
   		</div>
   <div class="item-wrapper section-2 soft-edge">
   		<div class="video-description">
@@ -38,22 +43,30 @@
   			<div class="am-park">
   			<div class="inner">
   			<div class="am">
-  			<img src="images/am-icon.png">
+  			<span class="icon">
+  			<img src="images/design-icons_pow-channel.svg">
+  			</span>
+  			<span class="description">
   			<h4>All Mountain</h4>
   			<ul>
   			<li>Surfy Edge-to-Edge transitions</li>
   			<li>Increased Agility: controlled drifts + strong carves</li>
   			<li>Playful when you want it, aggressive when you need it.</li>
   			</ul>
+  			</span>
   			</div>
   			<div class="park">
-  			<img src="images/park-icon.png">
+  			<span class="description">
+  			<img src="images/design-icons_butter-pad.svg">
+  			</span>
+  			<span class="description">
   			<h4>Park</h4>
   			<ul>
   			<li>Sharp edges now slide smooth: No Edge-to-Feature contact</li>
   			<li>Upgraded Butter Game</li>
   			<li>Park Design that Charges Hardest from Summit to Base</li>
   			</ul>
+  			</span>
   			</div>
   			</div>
   			</div>
