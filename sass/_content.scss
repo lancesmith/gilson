@@ -23,46 +23,55 @@
 			padding: 80px 5%;
 		}
 		&.story {
+			//av background-image: url(asset-path('history-feature-secondary.png'));
 			background-image: url("../images/history-feature-secondary.png");
 			background-size: cover;
 			background-position: center;
 			}
 		&.about {
+			//av background-image: url(asset-path('about-secondary-header.png'));
 			background-image: url("../images/about-secondary-header.png");
 			background-size: cover;
 			background-position: center;
 		}		
 		&.apparel {
+			//av background-image: url(asset-path('apparel-design-header.png'));
 			background-image: url("../images/apparel-design-header.png");
 			background-size: cover;
 			background-position: center;
 		}		
 	&.tour {
+			//av background-image: url(asset-path('winter-tour-header.jpg'));
 			background-image: url("../images/winter-tour-header.jpg");
 			background-size: cover;
 			background-position: center;
 		}	
 		&.custom {
+			//av background-image: url(asset-path('custom-header.png'));
 			background-image: url("../images/custom-header.png");
 			background-size: cover;
 			background-position: center;
 		}	
 		&.design {
+			//av background-image: url(asset-path('board-base-header.jpg'));
 			background-image: url("../images/board-base-header.jpg");
 			background-size: cover;
 			background-position: center;
 			}
 		&.design.ski {
+			//av background-image: url(asset-path('ski-design-header.png'));
 			background-image: url("../images/ski-design-header.png") !important;
 			background-size: cover;
 			background-position: bottom;
 			}	
 		&.faq {
+			//av background-image: url(asset-path('faq-header.png'));
 			background-image: url("../images/faq-header.png") !important;
 			background-size: cover;
 			background-position: bottom;
 		}		
 		&.riders {
+			//av background-image: url(asset-path('riders-header.png'));
 			background-image: url("../images/riders-header.png");
 			background-size: cover;
 			background-position: center;
@@ -110,6 +119,7 @@
 	width: 100%;
 	margin: 0;
 	height: 100vh;
+	//av background: url(asset-path('murdock-fade.png'));
 	background: url('../images/murdock-fade.png');
 	background-size: 180%;
 	background-repeat: no-repeat;
@@ -343,6 +353,7 @@
 }	
 
 &.why {
+		//av background-image: url(asset-path('product-shots/pow-board-base-2.jpg'));
 		background-image: url("../images/product-shots/pow-board-base-2.jpg");
 		height: 100%;
 //		background-attachment: none;
@@ -383,6 +394,7 @@
 	}
 
 &.gilson-story-top {
+		//av background-image: url(asset-path('wood-plane-nick-austin.jpg'));
 		background-image: url("../images/wood-plane-nick-austin.jpg");
 		height: 100%;
 		background-attachment: none;
@@ -411,6 +423,7 @@
 			}  
 	}
 	&.gilson-story {
+		//av background: url(asset-path('history-feature.png'));
 		background: url("../images/history-feature.png");
 		background-position: top;
 		background-repeat: repeat-x;
@@ -495,6 +508,7 @@
 		}
 	}
 	&.reviews {
+		//av background: url(asset-path('review-bkgrnd.png'));
 		background: url("../images/review-bkgrnd.png");
 		background-position: top;
 		background-repeat: repeat-x;
@@ -577,6 +591,7 @@
 		}
 	}
 	.left-col {
+		//av background: url(asset-path('custom-feature.png'));
 		background: url("../images/custom-feature.png") $vermillion;
 		background-size: 100%;
 //		float: left;
@@ -605,6 +620,7 @@
 	}
 	.right-col {
 		background-color: $light-blue;
+		//av background-image: url(asset-path('rider-collage-blue.png'));
 		background-image: url('../images/rider-collage-blue.png');
 		
 //		float: left;
@@ -1362,6 +1378,7 @@ button {
 	}
 	.row {
 		padding: 40px 5%;
+		//av background-image: url(asset-path('story-dot.png'));
 		background-image: url('../images/story-dot.png');
 		background-repeat: repeat-y;
 		background-position: center bottom;
@@ -1379,17 +1396,20 @@ button {
 		}
 	}
 	&.first {
+		//av background-image: url(asset-path('story-first.png'));
 		background-image: url('../images/story-first.png');	
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		}
 	&.last {
+		//av background-image: url(asset-path('story-end-mobile.png'));
 		background-image: url('../images/story-end-mobile.png');	
 		background-repeat: no-repeat;
 		background-position: center top;
 		padding: 40px 5% 180px 5%;
 //		min-height: 450px;
 	@include tablet-med-large {
+		//av background-image: url(asset-path('story-end.png'));
 		background-image: url('../images/story-end.png');	
 	}
 		}
@@ -1410,11 +1430,13 @@ button {
 			max-width: 450px;
 			align-self: center;
 			margin: 0 auto;
+			//av background: url(asset-path('story-text-bracket-mobile.png'));
 			background: url('../images/story-text-bracket-mobile.png');
 			background-position: right top;
 			background-repeat: no-repeat;
 			background-color: #fff;
 			@include mobile-large {
+			//av background-image: url(asset-path('story-text-bracket.png'));
 			background-image: url('../images/story-text-bracket.png');
 			background-position: left bottom;
 			max-width: 300px;
@@ -1423,6 +1445,7 @@ button {
 			}
 			.inner {
 			background-repeat: no-repeat;
+			//av background-image: url(asset-path('story-text-bracket-mobile.png'));
 			background-image: url("../images/story-text-bracket-mobile.png");
 			border-left: none;
 			float: left;
@@ -1430,6 +1453,7 @@ button {
 			background-position: left top;
 			background-repeat: no-repeat;
 			@include mobile-large {
+				//av background-image: url(asset-path('story-text-bracket.png'));
 				background-image: url("../images/story-text-bracket.png");
 				background-repeat: no-repeat;
 			}
@@ -1448,6 +1472,7 @@ button {
 			}
 		}
 		.year-wrapper {
+		//av background-image: url(asset-path('story-dot.png'));
 		background-image: url('../images/story-dot.png');	
 		background-repeat: repeat-x;
 		background-position: center;
@@ -1589,6 +1614,7 @@ padding: 0;
 
 .design-feature.one {
 min-height: 400px;
+//av background-image: url(asset-path('product-shots/butter-board-base-2.jpg'));
 background-image: url('../images/product-shots/butter-board-base-2.jpg');
 background-size: cover;
 background-attachment: fixed;
@@ -1596,6 +1622,7 @@ background-attachment: fixed;
 
 .design-feature.two {
 min-height: 400px;
+//av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/board-topsheet-3.jpg');
 background-size: cover;
 background-attachment: fixed;
@@ -2368,6 +2395,7 @@ margin: 0 auto;
 }
 }
 .about-feature-photo {
+//av background-image: url(asset-path('product-shots/ski-base-1.jpg'));
 background-image: url('../images/product-shots/ski-base-1.jpg');
 min-height: 400px;
 background-size: 120%;
