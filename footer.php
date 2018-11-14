@@ -1,6 +1,6 @@
 <footer>
   <div class="container-1">
-  <a class="logo" href="/index.html"><img src="./images/gilson-logo-reverse.png" title="Gilson" alt="Gilson"></a>
+  <a class="logo" href="/index.html"><img src="./images/gilson-logo-reverse.svg" title="Gilson" alt="Gilson"></a>
   <ul class="social">
   <li><a href="https://www.facebook.com/GilsonSnow/"><i class="fab fa-facebook"></i></a></li>
 <!--  <li class="fab fa-twitter"><a href="">Twitter</a></li>-->
