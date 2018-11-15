@@ -1521,7 +1521,11 @@ button {
 &.design {
 padding: 0;
 .boilerplate {
-//background: $tan;
+&.snowboard {
+.copy-wrapper {
+padding-bottom: 40px;
+}
+}
 .inner {
 	padding: 80px 0 0 0;
 	max-width: 900px;
@@ -1621,6 +1625,7 @@ min-height: 400px;
 //av background-image: url(asset-path('product-shots/butter-board-base-2.jpg'));
 background-image: url('../images/product-shots/butter-board-base-2.jpg');
 background-size: cover;
+background-position: center;
 background-attachment: fixed;
 }
 
@@ -1629,6 +1634,34 @@ min-height: 400px;
 //av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/board-topsheet-3.jpg');
 background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.design-feature.three {
+min-height: 400px;
+//av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
+background-image: url('../images/product-shots/pow-board-base-2.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.design-feature.four {
+min-height: 400px;
+//av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
+background-image: url('../images/product-shots/butter-board-base-3.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.design-feature.five {
+min-height: 400px;
+//av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
+background-image: url('../images/product-shots/fly-base-3.jpg');
+background-size: cover;
+background-position: center;
 background-attachment: fixed;
 }
 
@@ -1649,12 +1682,12 @@ background-attachment: fixed;
 	@include mobile-large {
 	flex-flow: row;
 	}
-	.am {
+	.am, .park {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	min-width: 300px;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	padding: 0 5%;
 	color: $light-blue;
 	span.icon {
@@ -1663,6 +1696,7 @@ background-attachment: fixed;
 	}
 	span.description {
 	float: left;
+	width: 70%;
 	}
 	@include mobile-large {
 	padding: 0;
@@ -1673,56 +1707,59 @@ background-attachment: fixed;
 	vertical-align: middle;
 //	padding: 30px;
 	box-sizing: border-box;
-	max-width: 80px;
+	width: 80px;
 	align-self: center;
 	margin: 0 20px 0 0;
 	}	
 	}
-	.park {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	min-width: 300px;
-	margin: 0 auto;
-	padding: 0 5%;
-	color: $light-blue;
-	span.icon {
-	float: left;
-	display: table;
-	}
-	span.description {
-	float: left;
-	}
-	img {
-	float: left;
-		display: table-cell;
-		vertical-align: middle;
-	//	padding: 30px;
-		box-sizing: border-box;
-		max-width: 80px;
-		align-self: center;
-		margin: 0 20px 0 0;
-	}
-	}
+//	.park {
+//	width: 100%;
+//	display: flex;
+//	justify-content: space-around;
+//	min-width: 300px;
+//	margin: 0 auto;
+//	padding: 0 5%;
+//	color: $light-blue;
+//	span.icon {
+//	float: left;
+//	display: table;
+//	}
+//	span.description {
+//	float: left;
+//	}
+//	img {
+//	float: left;
+//		display: table-cell;
+//		vertical-align: middle;
+//	//	padding: 30px;
+//		box-sizing: border-box;
+//		width: 80px;
+//		align-self: center;
+//		margin: 0 20px 0 0;
+//	}
+//	}
 	h4 {
 	color: $light-blue;
 	float: left;
-	width: 70%;
-	display: inline;
+//	width: 70%;
+//	display: inline;
 	}
 	ul {
 	padding: 0 0 0 20px;
 	float: left;
-	width: 70%;
-	display: inline;
+	box-sizing: border-box;
+	width: auto;
+//	width: 70%;
+//	display: inline;
 	li {
 	list-style: square;
-	padding: 20px 0 0 0;
+	padding: 0 0 20px 0;
 	color: $light-blue;
+	line-height: 1.5em;
 	}
 	}
 	}
-	
+//	
 }
 
 .central-flex, .butter-pad {
@@ -1751,6 +1788,7 @@ background-attachment: fixed;
 		img {
 		max-width: 250px;
 		float: right;
+		margin: 0 20px;
 		}
 		h3, h4 {
 		max-width: 700px;
@@ -1770,6 +1808,7 @@ background-attachment: fixed;
 		ul {
 		float: right;
 		clear: both;
+		padding: 0 0 0 20px;
 		li {
 		text-align: left;
 		max-width: 400px;
@@ -2485,8 +2524,8 @@ background: $blue;
 .board-outlines {
 display: flex;
 justify-content: space-around;
-flex-flow: row;
-padding: 0 0 40px 0;
+flex-flow: row wrap;
+padding: 0 0 80px 0;
 margin: 0 auto;
 width: 100%;
 max-width: 900px;

@@ -19,9 +19,15 @@
   		<h3>Each Gilson design feature is <strong>engineered with intention and precision</strong> to give you a <strong>heightened experience</strong> while <strong>cruising the mountain</strong>.</h3>
   		</div>
   		<div class="board-outlines">
+  		<span>
   		<img src="images/board-outlines-vertical_am.svg">
+  		</span>
+  		<span>
   		<img src="images/board-outlines-vertical_park.svg">
+  		</span>
+  		<span>
   		<img src="images/board-outlines-vertical_fly.svg">
+  		</span>
   		</div>
   		</div>
   <div class="item-wrapper section-2 soft-edge">
@@ -56,7 +62,7 @@
   			</span>
   			</div>
   			<div class="park">
-  			<span class="description">
+  			<span class="icon">
   			<img src="images/design-icons_butter-pad.svg">
   			</span>
   			<span class="description">
@@ -106,11 +112,11 @@
   			<p>The Pow Channel allows you to match your surface area in contact with the snow to the conditions you’re in.  It’s like having race skis and powder skis in the same piece of equipment.</p>
   			
   			<p>On groomers, only the runners contact the snow, giving you reduced drag and faster acceleration. In powder, your board sinks down to make full contact in the Pow Channel, giving you maximum float and a surfy ride.</p>
-  		<img src="images/pow-channel.png">
+  		<img src="images/base-design-icons_pow-channel-odd.svg">
   		</div>
   		</div>
   		</div>
-<div class="design-feature two">
+<div class="design-feature three">
 		</div> 
   <div class="item-wrapper section-2 butter-pad">
     		<div class="video-description">
@@ -124,14 +130,14 @@
   			<li>Smooth sliding on features</li>
   			<li>No Hangups</li>
   			</ul>
-  			<img src="images/butter-pad.png">
+  			<img src="images/base-design-icons_butter-pad.svg">
   		</div>
   		<div class="video">
   				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/177162300" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
   				</div>
   		</div>
   		</div>
-<div class="design-feature two">
+<div class="design-feature four">
 		</div> 
   <div class="item-wrapper section-2 pow-funnel">
     		<div class="video-description">
@@ -146,7 +152,7 @@
   			<li>Channels Snow Underfoot</li>
   			<li>Delivers peak performance and a Surfy Ride</li>
   			</ul>
-  			<img src="images/pow-channel.png">  		</div>
+  			<img src="images/base-design-icons_pow-channel-odd.svg">  		</div>
   		</div>
   		</div>
   		</div>
