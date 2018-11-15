@@ -7,7 +7,7 @@
 <!--  <div class="content-wrapper">-->
   	<div class="inner">
   		<div class="full-width design">
-  		<div class="boilerplate snowboard">
+  		<div class="boilerplate ski">
   		<div class="inner">
   		<ul>
   		<li class="planet"><div class="img-wrapper"><img src="images/design-icons-01.png"></div>We believe in <strong>exploring our planet</strong> and <strong>having more fun outside</strong>.</li>
@@ -41,27 +41,38 @@
   			<div class="am-park">
   			<div class="inner">
   			<div class="am">
-  			<img src="images/am-ski-icon.png">
+  			<span class="icon">
+  			<img src="images/design-icons_skis-design.svg">
+  			</span>
+  			<span class="description">
   			<h4>All Mountain</h4>
   			<ul>
   			<li>Surfy Edge-to-Edge transitions</li>
   			<li>Increased Agility: controlled drifts + strong carves</li>
   			<li>Playful when you want it, aggressive when you need it.</li>
   			</ul>
+  			</span>
   			</div>
   			<div class="park">
-  			<img src="images/park-ski-icon.png">
+  			<span class="icon">
+  			<img src="images/design-icons_skis-design.svg">
+  			</span>
+  			<span class="description">
   			<h4>Park</h4>
   			<ul>
   			<li>Sharp edges now slide smooth: No Edge-to-Feature contact</li>
   			<li>Upgraded Butter Game</li>
   			<li>Park Design that Charges Hardest from Summit to Base</li>
   			</ul>
+  			</span>
   			</div>
   			</div>
   			</div>
   		</div>
-<?php include 'button-set.php' ?>
-<!--    </div>-->
+<div class="content-button-set all single clearfix">
+		<ul>
+			<li class="snowboard-button"><a href="skis.php">Skis</a></li>
+		</ul>
+	</div><!--    </div>-->
     </div>
 <?php include 'footer.php' ?>
