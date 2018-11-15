@@ -1,6 +1,6 @@
 <?php include 'head.php' ?>
 <?php include 'header.php' ?>
-  <div class="main-content secondary">
+  <div class="main-content secondary tour">
   	<div class="hero tour">
   		<h1>WINTER TOUR</h1>
   	</div>
@@ -28,62 +28,68 @@
   		<table>
   		<tbody>
   		<tr>
-  		<th>
+  		<th style="width: 10%;">
   		Date
   		</th>
-  		<th>
-  		Location
+  		<th style="width: 30%;">
+  		Venue
   		</th>
+  		<th style="width: 30%;">
+  			Location
+  			</th>
+  				<th style="width: 30%;">
+  					Event
+  					</th>
   		</tr>
   			<tr>
   			<td>1/1/19</td>
-  			<td>Crested Butte, CO</td>
+  			<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+  			<td>Georgetown, CO</td>
+  			<td>Event</td>
   			</tr>
   			<tr>
   				<td>1/1/19</td>
-  				<td>Crested Butte, CO</td>
+  				<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+  				<td>Georgetown, CO</td>
+  				<td>Event</td>
   				</tr>
-  				<tr>
-  					<td>1/1/19</td>
-  					<td>Crested Butte, CO</td>
-  					</tr>
-  					<tr>
-  						<td>1/1/19</td>
-  						<td>Crested Butte, CO</td>
-  						</tr>
-  						<tr>
-  							<td>1/1/19</td>
-  							<td>Crested Butte, CO</td>
-  							</tr>
-  							<tr>
-  								<td>1/1/19</td>
-  								<td>Crested Butte, CO</td>
-  								</tr>
-  								<tr>
-  									<td>1/1/19</td>
-  									<td>Crested Butte, CO</td>
-  									</tr>
-  									<tr>
-  											<td>1/1/19</td>
-  											<td>Crested Butte, CO</td>
-  											</tr>
-  											<tr>
-  													<td>1/1/19</td>
-  													<td>Crested Butte, CO</td>
-  													</tr>
-  													<tr>
-  															<td>1/1/19</td>
-  															<td>Crested Butte, CO</td>
-  															</tr>
-  															<tr>
-  																	<td>1/1/19</td>
-  																	<td>Crested Butte, CO</td>
-  																	</tr>
-  																	<tr>
-  																			<td>1/1/19</td>
-  																			<td>Crested Butte, CO</td>
-  																			</tr>
-  		</th>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+<tr>
+	<td>1/1/19</td>
+	<td><a href="https://skiloveland.com" target="_blank">Loveland Ski Area</a>
+	<td>Georgetown, CO</td>
+	<td>Event</td>
+	</tr>
+						  		</th>
   		</tbody>
   		</table>
   		</div>
