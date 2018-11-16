@@ -419,6 +419,19 @@ span {
 	}
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+.three-fourths {
+.items {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+.item {
+width: 250px !important;
+}
+}
+}
+}
+
 .item-feature {
 	text-align: center;
 	padding: 80px 0 0 0;

@@ -157,3 +157,10 @@ ul.social {
 	}
 }
 }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   footer .logo img {
+   max-width: 190px;
+   width:  auto;
+   }
+}
