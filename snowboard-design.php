@@ -92,7 +92,7 @@
   		</ul>
   		</div>
   		<div class="video">
-  			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/190103318" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/301029267" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   			</div>
   			<script src="https://player.vimeo.com/api/player.js"></script>
   			</div>
@@ -103,7 +103,7 @@
   <div class="item-wrapper section-3 pow-channel">
     		<div class="video-description">
     		<div class="video">
-    				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/190102296" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/301030507" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     				</div>
     		<div class="text description">
   		<h3><strong>Pow Channel</strong></h3>
@@ -133,7 +133,7 @@
   			<img src="images/base-design-icons_butter-pad.svg">
   		</div>
   		<div class="video">
-  				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/177162300" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/301028433" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
   				</div>
   		</div>
   		</div>
@@ -142,7 +142,7 @@
   <div class="item-wrapper section-2 pow-funnel">
     		<div class="video-description">
     		<div class="video">
-    				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/177162300" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/301031169" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     				</div>
     		<div class="text description">
   		  		<h3><strong>Pow Funnel</strong></h3><h4>Powder Board Only</h4>
