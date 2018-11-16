@@ -11,7 +11,7 @@
   		  <div class="card faq">
   		    <div class="card-header" id="headingOne">
   		      <h5 class="mb-0">
-  		        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  		    <i class="far fa-plus"></i>
+  		        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  		    <i class="fas fa-plus"></i>
   		          Why does Gilson build for riders instead of stores?
   		        </button>
   		      </h5>
@@ -32,7 +32,7 @@
 <div class="card faq">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">  		    <i class="far fa-plus"></i>
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">  		    <i class="fas fa-plus"></i>
           Can I get a Gilson outside of the US?
         </button>
       </h5>
@@ -51,7 +51,7 @@
   <div class="card faq">
       <div class="card-header" id="headingThree">
         <h5 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">  		    <i class="far fa-plus"></i>
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">  		    <i class="fas fa-plus"></i>
             How long does it take to get my skis or snowboard?
           </button>
         </h5>
@@ -70,7 +70,7 @@
     <div class="card faq">
         <div class="card-header" id="headingFour">
           <h5 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">  		    <i class="far fa-plus"></i>
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">  		    <i class="fas fa-plus"></i>
               Why do Gilson snowboards flex between the feet and not at the nose and tail?
             </button>
           </h5>
@@ -91,7 +91,7 @@
       <div class="card faq">
           <div class="card-header" id="headingFive">
             <h5 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">  		    <i class="far fa-plus"></i>
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">  		    <i class="fas fa-plus"></i>
                 Why does Gilson build for riders instead of stores?
               </button>
             </h5>
@@ -112,7 +112,7 @@
         <div class="card faq">
             <div class="card-header" id="headingSix">
               <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">  		    <i class="far fa-plus"></i>
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">  		    <i class="fas fa-plus"></i>
                   How long does it take to adjust to the Gilson design?
                 </button>
               </h5>
@@ -132,7 +132,7 @@
           <div class="card faq">
               <div class="card-header" id="headingSeven">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">  		    <i class="far fa-plus"></i>
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">  		    <i class="fas fa-plus"></i>
                     How do you repair a Gilson if it gets scratched?
                   </button>
                 </h5>
@@ -152,7 +152,7 @@
             <div class="card faq">
                 <div class="card-header" id="headingEight">
                   <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">  		    <i class="far fa-plus"></i>
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">  		    <i class="fas fa-plus"></i>
                       How does the Gilson design handle on ice?
                     </button>
                   </h5>
@@ -175,7 +175,7 @@
               <div class="card faq">
                   <div class="card-header" id="headingNine">
                     <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">  		    <i class="far fa-plus"></i>
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">  		    <i class="fas fa-plus"></i>
                         Does the Pow Channel mean it's just a powder board?
                       </button>
                     </h5>
@@ -200,7 +200,7 @@
                 <div class="card faq">
                     <div class="card-header" id="headingTen">
                       <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">  		    <i class="far fa-plus"></i>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">  		    <i class="fas fa-plus"></i>
                           Why is the Fly shaped like that?
                         </button>
                       </h5>
@@ -220,7 +220,7 @@
                   <div class="card faq">
                       <div class="card-header" id="heading11">
                         <h5 class="mb-0">
-                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">  		    <i class="far fa-plus"></i>
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">  		    <i class="fas fa-plus"></i>
                             Why is the nose of the park board flat?
                           </button>
                         </h5>
@@ -240,7 +240,7 @@
                     <div class="card faq">
                         <div class="card-header" id="heading12">
                           <h5 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">  		    <i class="far fa-plus"></i>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">  		    <i class="fas fa-plus"></i>
                               How can I try one out?
                             </button>
                           </h5>
@@ -260,7 +260,7 @@
                       <div class="card faq">
                           <div class="card-header" id="heading13">
                             <h5 class="mb-0">
-                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">  		    <i class="far fa-plus"></i>
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapse13">  		    <i class="fas fa-plus"></i>
                                 How do you tune a Gilson?
                               </button>
                             </h5>
@@ -285,7 +285,7 @@
                         <div class="card faq">
                             <div class="card-header" id="heading14">
                               <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">  		    <i class="far fa-plus"></i>
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">  		    <i class="fas fa-plus"></i>
                                   How do you wax a Gilson by machine?
                                 </button>
                               </h5>
@@ -305,7 +305,7 @@
                           <div class="card faq">
                               <div class="card-header" id="heading15">
                                 <h5 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">  		    <i class="far fa-plus"></i>
+                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">  		    <i class="fas fa-plus"></i>
                                     How do you wax a Gilson at home?
                                   </button>
                                 </h5>
