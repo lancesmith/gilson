@@ -1353,6 +1353,7 @@ button {
 	padding: 80px 0;
 	p {
 		margin: 0;
+		white-space: pre-wrap;
 	}
 	}
 }
@@ -1466,7 +1467,8 @@ button {
 			padding: 10px 20px;
 			margin: 0;
 //			background-color: #fff;
-			border-top: 5px solid $light-blue;			
+			border-top: 5px solid $light-blue;		
+			white-space: pre-wrap;
 			@include mobile-large {
 				border-top: none;
 				padding: 20px;
