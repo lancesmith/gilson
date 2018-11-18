@@ -89,6 +89,7 @@
 			float: left;
 		}
 		button.btn.btn-primary.ruler {
+			//av background: url(asset-path('ruler.png'));
 			background: url('../images/ruler.png');
 			background-position: left;
 			background-repeat: no-repeat;
@@ -613,6 +614,7 @@ background-attachment: fixed;
 min-height: 500px;
 }
 &.pioneer {
+//av background-image: url(asset-path('product-shots/board-shot-1.jpg'));
 background-image: url('../images/product-shots/board-shot-1.jpg');
 }
 }
@@ -642,6 +644,7 @@ max-width: 400px;
 background-attachment: none;
 background-size: 110%;
 min-height: 300px;
+//av background-image: url(asset-path('jotto-7802.jpg'));
 background-image: url('../images/jotto-7802.jpg');
 background-repeat: no-repeat;
 @include mobile-large {
