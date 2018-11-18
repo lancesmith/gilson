@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="snowboards.php" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="snowboards.php" id="navbarDropdownMenuLink" aria-haspopup="true"  aria-expanded="false">
               SNOWBOARDS
             </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -44,7 +44,7 @@
                     </div>
                             </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
           Gilson Design
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

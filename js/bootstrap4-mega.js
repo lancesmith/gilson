@@ -51,12 +51,18 @@ return false;
 //    $(element).dropdown("toggle");
 //})
 
+$(document).ready(function () {
+if ($(window).width() < 980) {
+$('.dropdown-toggle').attr('data-toggle',"dropdown");
+}
+});
+
 //accordion style for FAQ
 $('.accordion button').click(function () {
-$(this).find('i.far').toggleClass('fa-plus fa-minus');
-//if ($('span.fas').hasClass('fa-times')) {
-//$('.main-content').toggleClass('overlay');
-//}
+$(this).find('i.fas').toggleClass('fa-plus fa-minus');
+if ($(this).hasClass('collapsed')) {
+$(this).find('i.fas').removeClass('fa-minus');
+}
 });
 
 //Riders page click effect
