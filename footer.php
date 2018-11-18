@@ -35,7 +35,7 @@
   <div class="inner">
 &copy; <script type="text/javascript">
   document.write(new Date().getFullYear());
-</script>, Gilson Boards, LLC. | <a href="#">Terms & Conditions</a>
+</script>, Gilson Boards, LLC. | <a href="./terms-conditions">Terms & Conditions</a>
   </div>
   </div>
   </footer>
@@ -52,5 +52,7 @@
   		<script type="text/javascript" src="js/riders.js"></script>
   		<script type="text/javascript" src="js/instafeed-find.js"></script>
   		<script type="text/javascript" src="js/jquery-accessible-subnav-dropdown.js"></script>
+  		<script type="text/javascript" src="js/readmore.js"></script>
+  		<script type="text/javascript" src="js/readmore.min.js"></script>
 </body>
 </html>
