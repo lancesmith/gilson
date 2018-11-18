@@ -20,13 +20,16 @@
   		</div>
   		<div class="board-outlines">
   		<span>
-  		<img src="images/board-outlines-vertical_am.svg">
+  		<h5>All-Mountain</h5>
+  		<img src="images/board-outlines-vertical-color_am.svg">
   		</span>
   		<span>
-  		<img src="images/board-outlines-vertical_park.svg">
+  		<h5>Park</h5>
+  		<img src="images/board-outlines-vertical-color_park.svg">
   		</span>
   		<span>
-  		<img src="images/board-outlines-vertical_fly.svg">
+  		<h5>Powder</h5>
+  		<img src="images/board-outlines-vertical-color_fly.svg">
   		</span>
   		</div>
   		</div>

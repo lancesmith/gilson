@@ -1,6 +1,6 @@
 <?php include 'head.php' ?>
 <?php include 'header.php' ?>
-  <div class="main-content secondary">
+  <div class="main-content secondary skis">
   	<div class="hero design ski">
   		<h1>SKI DESIGN</h1>
   	</div>
@@ -42,7 +42,7 @@
   			<div class="inner">
   			<div class="am">
   			<span class="icon">
-  			<img src="images/design-icons_skis-design.svg">
+  			<img src="images/design-icons_am-skis.svg">
   			</span>
   			<span class="description">
   			<h4>All Mountain</h4>
@@ -55,7 +55,7 @@
   			</div>
   			<div class="park">
   			<span class="icon">
-  			<img src="images/design-icons_skis-design.svg">
+  			<img src="images/design-icons_park-skis.svg">
   			</span>
   			<span class="description">
   			<h4>Park</h4>
