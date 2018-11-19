@@ -1118,16 +1118,32 @@ font-size: .9em;
 		p {
 			margin: 0 0 7px 0;
 		}
+		input.shopping {
+		color: #fff;
+		width: 100%;
+		max-width: 150px;
+		float: none;
+		text-align: center;
+		background: $slate;
+		padding: 20px;
+		font-size: 1em;
+		margin: 0 auto;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		cursor: pointer;
+		border: none;
+		}
 	}
 	.shopping-left {
 		width: 100%;
 		float: left;
 		text-align: left;
 		border-right: none;
-		@include tablet-med-large {
-			width: 70%;
-			border-right: 1px solid #cdcdcd;
-		}
+//		@include tablet-med-large {
+//			width: 70%;
+//			border-right: 1px solid #cdcdcd;
+//		}
 		.discount-wrapper {
 		float: left;
 		width: 100%;
@@ -1140,7 +1156,7 @@ font-size: .9em;
 		clear: both;
 		margin: 10px 0;
 		}
-		button {
+		button, input#remove.shopping, input#update.shopping {
 		color: #fff;
 		width: auto;
 //		max-width: 150px;
@@ -1350,7 +1366,7 @@ button {
 }
 
 .checkout-wrapper {
-	max-width: 800px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 	button.btn.btn-primary.btn-lg.btn-block {
