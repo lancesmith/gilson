@@ -1,0 +1,427 @@
+<% content_for :title, @title %> 
+<% content_for :metaDescription, @metaDescription %>
+ 
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="https://checkout-sandbox.getbread.com/bread.js" data-api-key="cc9d6bda-74ac-494b-b51a-3230c8e0d4e2"></script>
+
+<% if flash[:danger] %>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 alert alert-danger"><%= flash[:danger] %></div>
+  </div>
+<% end %>
+
+<div class="main-content secondary">
+  <div class="content-wrapper">
+    <div class="inner">
+      <div class="full-width shop">
+        <div class="checkout-wrapper row">
+
+          <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              Your cart
+            </h4>
+
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Product name</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$12</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Second product</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$8</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Third item</h6>
+                    <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-success">
+                  <h6 class="my-0">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success">-$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <%= form_tag("/checkout/order", id: "bread-checkout-form", method: "post") do %>
+              <%= fields :order do |f| %>
+		
+                <div class="mb-3">
+                  <label for="email">Email</label>
+		  <%= f.email_field(:email, id: "email", value: "#{@hashResp['Email']}", placeholder: "you@example.com", class: "form-control", autofocus: "autofocus", required: true) %>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <%= f.text_field(:bFirst, id: "bFirst", value: "#{@billing['First']}", class: "form-control", required: true) %>
+  
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+		    <%= f.text_field(:bFirst, id: "bLast", value: "#{@billing['Last']}", class: "form-control", required: true) %>
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="address">Address</label>
+		  <%= f.text_field(:bAddress1, id: "bAddress1", value: "#{@billing['Address1']}", placeholder: "1234 Main St.", class: "form-control", required: true) %>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+		  <%= f.text_field(:bAddress2, id: "bAddress2", value: "#{@billing['Address2']}", placeholder: "Apartment or suite", class: "form-control", required: true) %>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-8 mb-3">
+                    <label for="city">City</label>
+                      <%= f.text_field(:bCity, id: "bCity", value: "#{@billing['City']}", class: "form-control", required: true) %>
+                  </div>
+  
+                  <div class="col-md-4 mb-3">
+                    <label for="state">State</label>
+                    <% if @billing['Country'] == "United States" %>
+                      <%= f.text_field(:bState, id: "bState", value: "#{@billing['State']}", class: "form-control", readonly: true, required: true) %>
+                    <% else %>
+                      <%= f.text_field(:bState, id: "bState", value: "#{@billing['State']}", placeholder: "State", class: "form-control", required: true) %>
+                    <% end %>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="zip">Zip</label>
+		    <%= f.text_field(:bZip, id: "bZip", value: "#{@billing['Zip']}", class: "form-control", required: true) %>
+                  </div>
+                  <div class="col-md-8 mb-3">
+                    <label for="country">Country</label>
+		    <%= f.text_field(:bCountry, id: "bCountry", value: "#{@billing['Country']}", class: "form-control", readonly: true, required: true) %>
+                  </div>
+                </div>
+  
+	        <!-- ######################### -->
+  
+                <hr class="mb-4">
+  
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="same-address" onclick="setShipping(this.checked)">
+                  <label class="custom-control-label" for="same-address">Shipping address is the same as billing address</label>
+                </div>  		            
+  
+	        <!-- ######################### -->
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">Shipping Address</h4>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <%= f.text_field(:sFirst, id: "sFirst", value: "#{@shipping['First']}", class: "form-control", required: true) %>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <%= f.text_field(:sFirst, id: "sLast", value: "#{@shipping['Last']}", class: "form-control", required: true) %>
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="address">Address</label>
+                  <%= f.text_field(:sAddress1, id: "sAddress1", value: "#{@shipping['Address1']}", placeholder: "1234 Main St.", class: "form-control", required: true) %>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                  <%= f.text_field(:sAddress2, id: "sAddress2", value: "#{@shipping['Address2']}", placeholder: "Apartment or suite", class: "form-control", required: true) %>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-8 mb-3">
+                    <label for="city">City</label>
+                    <%= f.text_field(:sCity, id: "sCity", value: "#{@shipping['City']}", class: "form-control", required: true) %>
+                  </div>
+  
+                  <div class="col-md-4 mb-3">
+                    <label for="state">State</label>
+		    <% if @shipping['Country'] == "United States" %>
+                      <%= f.select(:sState, options_for_select(@states.each {|st| [st, st]}, "#{@shipping['State']}"), {include_blank: "Select State..."}, {class: "form-control", required: true, id: "sState"}) %>
+                    <% else %>
+                      <%= f.text_field(:sState, id: "sState", value: "#{@shipping['State']}", class: "form-control", required: true) %>
+                    <% end %>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="zip">Zip</label>
+                    <%= f.text_field(:sZip, id: "sZip", value: "#{@shipping['Zip']}", class: "form-control", required: true) %>
+                  </div>
+                  <div class="col-md-8 mb-3">
+                    <label for="country">Country</label>
+                    <%= f.text_field(:sCountry, id: "sCountry", value: "#{@shipping['Country']}", class: "form-control", readonly: true, required: true) %>
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="phone">Phone Number</span></label>
+                  <%= f.telephone_field(:phone, id: "phone", value: "#{@shipping['Phone']}", class: "form-control", required: true) %>
+                </div>
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">How did you find us?</h4>
+  
+                <div class="mb-3">
+                  <%= f.select(:heard, options_for_select(@heards.each {|hl| [hl, hl]}, "#{@hashResp['Heard']}"), {include_blank: "Select Reason..."}, {class: "form-control"}) %>
+                </div>
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">Newsletter</h4>
+  
+                <label for="news">Receive Gilson updates?</label>
+                <div class="btn-group btn-group-toggle col-md-4" data-toggle="buttons">
+                  <% if @hashResp['Newsletter'].blank? || @hashResp['Newsletter'] == "true" %>
+                    <label class="btn btn-secondary active" aria-pressed="true">
+                      <%= f.radio_button(:newsletter, "true", checked: true) %> Yes, Please!
+                    </label>
+                    <label class="btn btn-secondary" aria-pressed="false">
+                      <%= f.radio_button(:newsletter, "false") %> No Thanks!
+                    </label>
+                  <% else %>
+                    <label class="btn btn-secondary" aria-pressed="false">
+                      <%= f.radio_button(:newsletter, "true", checked: true) %> Yes, Please!
+                    </label>
+                    <label class="btn btn-secondary active" aria-pressed="true">
+                      <%= f.radio_button(:newsletter, "false") %> No Thanks!
+                    </label>
+                  <% end %>
+                </div>
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">Pay With Credit Card</h4>
+  
+	         <!-- Credit Card -->
+                <div class="mb-3">
+                  <label for="cc-number">Credit card number</label>
+                  <%= f.text_field(:creditCard, class: "form-control") %>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="cc-expiration">Expiration Month</label>
+                    <%= f.select(:creditMonth, options_for_select(@creditMonths.each {|mt| [mt, mt]}), {include_blank: "Month"}, {class: "form-control"}) %>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="cc-expiration">Expiration Year</label>
+                    <%= f.select(:creditYear, options_for_select(@creditYears.each {|cy| [cy, cy]}), {include_blank: "Year"}, {class: "form-control"}) %>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="cc-expiration">CVV</label>
+                    <%= f.text_field(:creditCid, class: "form-control") %>
+                  </div>
+                </div>
+  
+                <%= f.submit(id: "submitButton", value: "Submit Credit", class: "btn btn-primary btn-lg btn-block") %>
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">Pay With PayPal</h4>
+  
+                <!-- PayPal -->
+                <div class="mb-3">
+                  <%= f.hidden_field(:paypalPaymentId, id: "paypalPaymentId", value: "") %>
+                  <%= f.hidden_field(:paypalPayerId, id: "paypalPayerId", value: "") %>
+                  <div id="paypal-button"></div>
+                </div>
+  
+                <hr class="mb-4">
+                <h4 class="mb-3">Finance With Bread</h4>
+  
+  
+                <% if @billing['Country'] == "United States" %>
+                  <% unless ['IA','OH','WV'].include? @billing['State'] %>
+                    <!-- Bread -->
+                    <!-- Only in USA, Exclude from Iowa, Ohio, and West Virginia -->
+                    <div id="bread-checkout-btn" data-bread-default-size="true"></div>
+                    <script>
+                      var opts = {
+                        buttonId: 'bread-checkout-btn',
+                        actAsLabel: false,
+                        asLowAs: true,
+                        shippingOptions: [{
+                          <% if @hashResp['BreadShipping'] == "0" %>
+                            type:'Free Shipping',
+                            typeId:'Free Shipping',
+                            cost:0
+                          <% else %>
+                            type:'Flat Rate Shipping',
+                            typeId:'Flat Rate Shipping',
+                            cost:<%= @hashResp['BreadShipping'] %>
+                          <% end %>
+                        }],
+                        tax:<%= @hashResp['BreadTax'] %>,
+                        items: [
+                          <% @hashResp['BreadItems'].each_with_index do |b,i| %>
+                            <% if i != 0 %>
+                              ,
+                            <% end %>
+                            {
+                              name:'<%= b["Name"] %>',
+                              sku:'<%= b["Attribute"] %>',
+                              price:<%= b['Price'] %>,
+                              quantity:<%= b['Quantity'] %>,
+                              imageUrl:'https://www.gilsonsnow.com<%= image_path("mu.png") %>',
+                              detailUrl:'https://www.gilsonsnow.com'
+                            }
+                          <% end %>
+                        ]
+                        <% unless @hashResp['BreadDiscounts'].blank? %>
+                          ,
+                          discounts: [
+                            <% @hashResp['BreadDiscounts'].each_with_index do |b,i| %>
+                              <% if i != 0 %>
+                                ,
+                              <% end %>
+                              {
+                                amount:<%= b['Amount'] %>,	
+                                description:'<%= b["Description"] %>'
+                              }
+                            <% end %>
+                          ]
+                        <% end %>
+                      };
+                      bread.checkout(opts);
+                    </script>
+                  <% end %>
+                <% end %>
+
+              <% end %>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+<script>
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'AdNFAL2XPPbfSUHEcnjcupAyG9ayJXE8CwZ72pm2B0z6FXpQbotO79qWwAjV6OU-ej8B0_TJlpEhkvSr',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+    size: 'medium',
+    color: 'blue',
+    shape: 'pill',
+    label: 'paypal',
+    tagline: 'false'
+  },
+  // Set up a payment
+  payment: function(data, actions) {
+    return actions.payment.create({
+      transactions: [{
+        amount: {
+          total: '<%= @hashResp["Total"] %>',
+          currency: 'USD',
+          details: {
+            subtotal:'<%= @hashResp["PaypalSubtotal"] %>',
+            tax:'<%= @hashResp["Tax"] %>',
+            shipping:'<%= @hashResp["Shipping"] %>'
+          }
+        },
+        item_list: {
+          items: [
+            <% @hashResp['PaypalItems'].each_with_index do |p,i| %>
+              <% if i != 0 %>
+                ,
+              <% end %>
+              {
+                name:'<%= p["Name"] %>',
+                price:'<%= p["Price"] %>',
+                quantity:'<%= p["Quantity"] %>',
+                currency:'USD'
+              }
+            <% end %>
+          ]
+        }
+      }]
+    });
+  },
+  // Execute the payment
+  onAuthorize: function(data, actions) {
+
+    return actions.payment.get().then(function(data) {
+
+      var pi = data.payer.payer_info;
+      var ship = pi.shipping_address;
+
+      document.getElementById('paypalPaymentId').value = data.id;
+      document.getElementById('paypalPayerId').value = pi.payer_id;
+
+      document.getElementById('email').value = pi.email;
+
+      document.getElementById('bFirst').value = pi.first_name;
+      document.getElementById('bLast').value = pi.last_name;
+      document.getElementById('bAddress1').value = ship.line1;
+      document.getElementById('bAddress2').value = ship.line2;
+      document.getElementById('bCity').value = ship.city;
+      document.getElementById('bZip').value = ship.postal_code;
+
+      document.getElementById('sFirst').value = pi.first_name;
+      document.getElementById('sLast').value = pi.last_name;
+      document.getElementById('sAddress1').value = ship.line1;
+      document.getElementById('sAddress2').value = ship.line2;
+      document.getElementById('sCity').value = ship.city;
+      document.getElementById('sState').value = ship.state;
+      document.getElementById('sZip').value = ship.postal_code;
+      document.getElementById('phone').value = ship.phone;
+
+      var subButton = document.getElementById('submitButton');
+      subButton.value = "Submit PayPal";
+      subButton.click();
+      subButton.value = "Submit Credit";
+    });
+  }
+}, '#paypal-button');
+</script>
+
+<script type="text/javascript">
+function setShipping(isChecked) {
+  if (isChecked) {
+    document.getElementById('sFirst').value = document.getElementById('bFirst').value
+    document.getElementById('sLast').value = document.getElementById('bLast').value
+    document.getElementById('sAddress1').value = document.getElementById('bAddress1').value
+    document.getElementById('sAddress2').value = document.getElementById('bAddress2').value
+    document.getElementById('sCity').value = document.getElementById('bCity').value
+    document.getElementById('sState').value = document.getElementById('bState').value
+    document.getElementById('sZip').value = document.getElementById('bZip').value
+  } else {
+    document.getElementById('sFirst').value = ""
+    document.getElementById('sLast').value = ""
+    document.getElementById('sAddress1').value = ""
+    document.getElementById('sAddress2').value = ""
+    document.getElementById('sCity').value = ""
+    document.getElementById('sState').value = ""
+    document.getElementById('sZip').value = ""
+  }
+}
+</script>

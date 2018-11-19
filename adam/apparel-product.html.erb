@@ -1,0 +1,89 @@
+<% content_for :title, @title %>
+<% content_for :metaDescription, @metaDescription %>
+
+<div class="main-content">
+  <div class="content-wrapper item-page apparel">
+    <div class="item-wrapper section-1">
+      <div class="item-inner">
+
+        <div class="apparel item">
+          <div class="item-wrapper">
+            <% if @image1.blank? %>
+
+              <a href="<%= image_path("apparel/default.jpg") %>" class="MagicZoom">
+                <%= image_tag("apparel/default-small.jpg") %>
+              </a>
+
+            <% else %>
+
+              <% if @images.blank? %>
+                <a href="<%= image_path("#{@image1}.jpg") %>" class="MagicZoom">
+                  <%= image_tag("#{@image1}.jpg") %>
+                </a>
+              <% else %>
+                <a href="<%= image_path("#{@image1}.jpg") %>" class="MagicZoom" id="stayrad">
+                  <%= image_tag("#{@image1}.jpg") %>
+                </a>
+
+                <a data-zoom-id="stayrad" href="<%= image_path("#{@image1}.jpg") %>" data-image="<%= image_path("#{@image1}.jpg") %>">
+                  <%= image_tag("#{@image1}-thumb.jpg") %>
+                </a>
+
+                <% @images.each do |i| %>
+                  <a data-zoom-id="stayrad" href="<%= image_path("#{i}.jpg") %>" data-image="<%= image_path("#{i}.jpg") %>">
+                    <%= image_tag("#{i}-thumb.jpg") %>
+                  </a>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div> <!-- apparel / item -->
+
+        <div class="name-price-add">
+
+          <h2 class="item-name"><%= @name %></h2>
+
+          <div class="price-size">
+            <h4 class="item-price">$<%= @price %></h4>
+          </div>
+
+          <p>Incredibly Soft, Totally Recycled</p>
+          <p>Gilson x Recover</p>
+          <p>This regular fit tee is responsibly manufactured from a 50/50 cotton/polyester blend, giving you all the comfort of cotton and the performance of polyester.  Lightweight, soft, and durable; this tee has you covered at the mountain and out on the town.</p>
+
+          <%= form_tag("/cart/add", method: "post") do %>
+            <%= fields :add do |f| %>
+	      <div class="apparel-size"> 
+                <%= f.hidden_field(:url, value: "#{@url}") %>
+                <%= f.hidden_field(:quantity, value: "1") %>
+                <label for="sizes"><%= @attrDesc %>: </label>
+                <%= f.select(:id_attribute, options_for_select(@attributes.each {|at| [at['Value'], at['Id']]}), {include_blank: false}, {class: "custom-select", id: "sizes"}) %>
+              </div> 
+                <%= f.submit(value: "Add to Cart", class: "add-cart") %>
+                <%= render 'layouts/addCartTextIconsApparel.html.erb' %>
+            <% end %>
+          <% end %>
+        </div> 
+
+      </div> <!-- name-price-add -->
+
+      <div class="apparel-wrapper"><%= render 'layouts/apparelProcess.html.erb' %></div>
+
+      <div class="apparel-feature"></div>
+
+      <div class="item-feature">
+        <h3>OTHER APPAREL ITEMS</h3>
+        <div class="items">
+
+          <div class="item">
+    <!-- avav -->
+            <a href="/apparel/stay-rad-tee/stay-rad-tee"><%= image_tag("apparel/stay-rad-tee/stay-rad-tee-front-small.jpg", alt: "alt", title: "title") %></a>
+            <p class="name"><a href="/apparel/stay-rad-tee">Stay Rad</a></p>
+            <p class="price">$599.99</p>
+          </div> <!-- item -->
+
+        </div>
+      </div> <!-- item-feature -->
+
+    </div>
+  </div>

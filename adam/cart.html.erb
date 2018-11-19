@@ -1,0 +1,216 @@
+<% content_for :title, @title %> 
+<% content_for :metaDescription, @metaDescription %>
+
+<% if flash[:info] %>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-3 alert alert-info"><%= flash[:info] %></div>
+</div>
+<% end %>
+<% if @hashResp['Records'].blank? %>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-3">Nothing in the cart.</div>
+</div>
+<% else %>
+
+<div class="main-content secondary">
+  <div class="content-wrapper">
+    <div class="inner">
+      <div class="full-width shop">
+        <div class="shopping-cart-wrapper">
+          <div class="shopping-left">
+            <h4>Your Shopping Cart</h4>
+              <div class="shopping-top">
+	        <% @hashResp['Records'].each do |r| %>
+                  <div class="product-image">
+                    <%= image_tag("apparel/default.jpg") %>
+                  </div>
+                  <div class="right">
+                    <%= form_tag("/cart/update", method: "post") do %>
+                      <%= fields :update do |f| %>
+                        <%= f.hidden_field(:id_cart_product, value: "#{r['CartProductId']}" ) %>
+                        <%= f.hidden_field(:beforeId_attribute, value: "#{r['AttributeId']}" ) %>
+                        <%= f.hidden_field(:beforeQuantity, value: "#{r['Quantity']}" ) %>
+                        <span><label for="product-name">Item Name: </label><p class="product-name"><%= r['Name'] %></p></span>
+                        <span><label for="product-type"></label><p class="product-type"><%= r['Shape'] %>  <%= r['Type'] %></p></span>
+	                <span>
+                          <label for="product-size"></label>
+                          <p class="product-size">
+                            <%= f.select(:id_attribute, options_for_select(r['Attributes'].map.each {|at| [at['Value'], at['Id']]}, "#{r['AttributeId']}"), {include_blank: false}) %>
+                          </p>
+                        </span>
+	                <span><label for="product-price">Price: </label><p class="product-price">$<%= r['Price'] %></p></span>
+                        <span>
+                          <label for="quantity">Quantity: </label>
+	                  <%= f.number_field(:quantity, value: "#{r['Quantity']}", name: "quantity", required: true) %>
+	                  <%= f.submit(value: "Update", id: "update", class: "shopping") %>
+	                  <!-- <button class="shopping" id="remove"><i class="fas fa-times"></i> REMOVE</button> -->
+                        </span>
+                      <% end %>
+                    <% end %>
+                    <%= form_tag("/cart/remove", method: "post") do %>
+                      <%= fields :remove do |f| %>
+                        <%= f.hidden_field(:id_cart_product, value: "#{r['CartProductId']}" ) %>
+                        <%= f.submit(value: "Remove", id: "remove", class: "shopping") %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+
+              <div class="shopping-bottom">
+
+                <div class="totals">
+		  <span><label for="subtotal">Subtotal: </label><p class="subtotal">$<%= @hashResp['Subtotal'] %></p></span>
+
+                  <% if @hashResp['AmountRemaining'] != "0.00" %>
+                    <span><label for="subtotal">Note: </label><p class="subtotal">($<%= @hashResp['AmountRemaining'] %> until free shipping.)</p></span>
+                  <% end %>
+                  <% unless @hashResp['DiscountDesc'].blank? %>
+                    <span>
+                      <label for="subtotal">Discount: </label>
+                      <p class="discount"><%= @hashResp['DiscountDesc'] %> ($<%= @hashResp['DiscountTotal'] %>)</p>
+                    </span>
+                  <% end %>
+                  <span><label for="subtotal">Tax: </label><p id="tax" class="tax">$0.00</p></span>
+		  <span><label for="subtotal">Shipping: </label><p class="shipping">$<%= @hashResp['Shipping'] %></p></span>
+  
+                  <% unless @hashResp['RedeemTotal'] == "0.00" %>
+                    <span>
+                      <label for="subtotal">Gift Applied: </label>
+                      <p class="discount">($<%= @hashResp['RedeemTotal'] %>)</p>
+                    </span>
+                    <span><label for="subtotal">Note: </label><p class="subtotal">Remaining balance will be emailed to you.</p></span>
+                  <% end %>
+  
+		  <span><label for="subtotal">Total: </label><p id="total" class="total">$<%= @hashResp['Total'] %></p></span>
+                </div>
+
+                <div class="coupons">
+                  <button class="add-coupon-gc" data-toggle="collapse" href="#coupon-gc" role="button" aria-expanded="false" aria-controls="coupon-gc">Apply a Discount or Gift Cards</button>
+                  <div class="collapse" id="coupon-gc">
+                    <div class="discount-wrapper">
+                      <label for="discount">Discount: </label>
+		      <fieldset>
+		      <%= form_tag("/cart/discount", method: "post") do %>
+                        <%= fields :discount do |f| %>
+                          <%= f.text_field(:discount, name: "discount", placeholder: "INPUT COUPON CODE", required: true) %>
+                          <%= f.submit(value: "APPLY DISCOUNT", id: "apply-coupon", class: "shopping") %>
+                        <% end %>
+                      <% end %>
+		      <%= form_tag("/cart/discount/remove", method: "post") do %>
+                        <%= fields :remove do |f| %>
+                          <%= f.submit(value: "REMOVE DISCOUNT", id: "remove-coupon", class: "shopping") %>
+                        <% end %>
+                      <% end %>
+                      </fieldset>
+                    </div>
+                    <div class="gc-wrapper">
+                      <label for="gift-card">Gift Card: </label>
+		      <%= form_tag("/cart/giftcard", method: "post") do %>
+                        <%= fields :giftcard do |f| %>
+                          <%= f.text_field(:giftcard, name: "gift-card", placeholder: "INPUT GIFT CARD", required: true) %>
+                          <%= f.submit(value: "APPLY GIFT CARD", id: "apply-coupon", class: "shopping") %>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+	        
+                <%= form_tag("/checkout", method: "post") do %>
+                  <%= fields :checkout do |f| %>
+
+                    <div class="shipping">
+                      <span>
+                        <label for="country">Shipping Country: </label>
+                        <%= f.select(:bCountry, options_for_select(@countries.each {|ct| [ct, ct]}, "United States"), {include_blank: false}, {class: "custom-select", id: "country", onchange: "showHideStates('#{@hashResp['Total']}')"}) %>
+                      </span>
+
+                      <span>
+                        <label for="state">Shipping State: </label>
+                        <%= f.select(:bState, options_for_select(@states.each {|st| [st, st]}), {include_blank: "Select US State..."}, {class: "custom-select", id: "state", onchange: "changePaTax('#{@hashResp['Total']}', '#{@hashResp['PaTax']}', '#{@hashResp['PaTotal']}')", required: true}) %>
+                      </span>
+                    </div>
+
+                    <div class="checkout-wrapper">
+                      <p>Continue to</p>
+		      <%= f.submit(value: "CHECKOUT", class: "shopping") %>
+                    </div>
+	          <% end %>
+	        <% end %>
+  
+              </div>
+            </div>
+      
+            <!--<div class="checkout-wrapper">
+              <p>Continue to</p>
+              <button class="shopping" id="checkout">CHECKOUT</button>
+	    </div> -->
+  
+          </div>
+      
+          <div class="add-on">
+            <h3>Additional Items</h3>
+            <div class="items">
+              <div class="item">
+		      <a href=""><%= image_tag("apparel/default.jpg") %></a>
+                <p class="name"><a href="">Gilson Red Hoodie</a></p>
+                <p class="price">$58</p>
+              </div>
+              <div class="item">
+		      <a href=""><%= image_tag("apparel/default.jpg") %></a>
+                <p class="name"><a href="">Flat Bill Hat</a></p>
+                <p class="price">$25</p>
+              </div>
+              <div class="item">
+		      <a href=""><%= image_tag("apparel/default.jpg") %></a>
+                <p class="name"><a href="">Pint Glass</a></p>
+                <p class="price">$10</p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<% end %>
+<%= render 'layouts/buttonSet.html.erb' %>
+<script>
+function showHideStates(inTotal) {
+
+	var country = document.getElementById("country");
+	var state = document.getElementById("state");
+
+	var tax = document.getElementById("tax");
+	var total = document.getElementById("total");
+
+	state.disabled = false;
+
+	if (country.options[country.selectedIndex].value != "United States") {
+
+		state.selectedIndex = "0";
+		state.disabled = true;
+
+		tax.innerHTML = "$0.00";
+		total.innerHTML = "$" + inTotal;
+	}
+}
+
+function changePaTax(inTotal, paTax, paTotal) {
+
+	var state = document.getElementById("state");
+	var tax = document.getElementById("tax");
+	var total = document.getElementById("total");
+
+	tax.innerHTML = "$0.00";
+	total.innerHTML = "$" + inTotal;
+
+	if (state.options[state.selectedIndex].value == "PA") {
+		tax.innerHTML = "$" + paTax;
+		total.innerHTML = "$" + paTotal;
+	}
+}
+</script>
