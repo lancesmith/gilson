@@ -79,10 +79,15 @@
 			h1 {
 				color: #fff;
 				text-align: center;
+				font-size: 3.5em !important;
 				text-shadow: 5px 5px 20px #000;
+				@include mobile-large {
+				font-size: 4em !important;
+				}
 			}
 	}
 	}
+	
 @include clearfix;
 &.overlay {
 	background: #fff;
@@ -351,26 +356,32 @@
 	}
 }
 }	
-
 &.why {
 		//av background-image: url(asset-path('product-shots/pow-board-base-2.jpg'));
 		background-image: url("../images/product-shots/pow-board-base-2.jpg");
 		height: 100%;
 //		background-attachment: none;
 //		background-position: top;
-		background-size: cover;
+		background-size: 200%;
 		background-position: center;
-		background-attachment: fixed;
+		background-attachment: none;
 		background-repeat: no-repeat;
 //		background-size: 350%;
 		float: left;
 		width: 100%;
-		min-height: 550px;
+		min-height: 430px;
 		color: #fff;
-		@include tablet-med-large {
+		@include screen-large {
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+		min-height: 550px;
+		}
+		@include mobile-sm {
+		background-size: 220%;
+		background-position: center;
+		background-attachment: none;
+		min-height: 500px;
 		}
 		.text-container {
 		margin-top: 80px;
@@ -1298,7 +1309,7 @@ button {
 	white-space: normal;
 	&.btn-link {
 	&:hover {
-	text-decoration: underline !important;
+	text-decoration: none !important;
 	}
 	}
 }
@@ -1349,11 +1360,11 @@ button {
 	float: none;
 	width: 100%;
 	max-width: 1200px;
-	@include screen-large {
-	padding: 80px 0;
-	p {
+//	@include screen-large {
+//	padding: 80px 0;
+//	p {
 //		white-space: pre-wrap;
-	}
+//	}
 	}
 }
 .timeline-wrapper {
@@ -1363,22 +1374,22 @@ margin-bottom: 40px;
 	max-width: 100%;
 	text-align: center;
 	align-self: center;
-	@include mobile-large {
-	max-width: 300px;
-	}
+//	@include mobile-large {
+//	max-width: 300px;
+//	}
 	img {
-		border-radius: 100px;
-		-moz-border-radius: 100px;
-		-webkit-border-radius: 100px;
-		max-width: 200px;
+		border-radius: 200px;
+		-moz-border-radius: 200px;
+		-webkit-border-radius: 200px;
+		max-width: 320px;
 //		width: 100%;
 		height: auto;
 		margin: 0 auto;
 		align-self: center;
-		@include mobile-large {
-		margin: 0 0 0 100px;
-		align-self: center right;
-		}
+//		@include mobile-large {
+//		margin: 0 0 0 100px;
+//		align-self: center right;
+//		}
 	}
 	}
 	.row {
@@ -1388,9 +1399,9 @@ margin-bottom: 40px;
 		background-repeat: repeat-y;
 		background-position: center bottom;
 		margin: 0;
-		@include tablet-med-large {
-		padding: 40px 0;
-		}
+//		@include tablet-med-large {
+//		padding: 40px 0;
+//		}
 	&.odd {
 		background-color: $tan;
 		p {
@@ -1413,10 +1424,10 @@ margin-bottom: 40px;
 		background-position: center bottom;
 		padding: 40px 5% 180px 5%;
 //		min-height: 450px;
-	@include tablet-med-large {
-		//av background-image: url(asset-path('story-end.png'));
-		background-image: url('../images/story-end.png');	
-	}
+//	@include tablet-med-large {
+//		//av background-image: url(asset-path('story-end.png'));
+//		background-image: url('../images/story-end.png');	
+//	}
 		}
 	.moment {
 		max-width: 900px;
@@ -1426,9 +1437,9 @@ margin-bottom: 40px;
 		display: flex;
 //		justify-content: space-between;
 		flex-flow: row wrap;
-		@include mobile-large {
-			flex-flow: row; 
-		}
+//		@include mobile-large {
+//			flex-flow: row; 
+//		}
 		.text-wrapper {
 			float: left;
 			width: 100%;
@@ -1440,14 +1451,14 @@ margin-bottom: 40px;
 			background-position: right top;
 			background-repeat: no-repeat;
 			background-color: #fff;
-			@include mobile-large {
-			//av background-image: url(asset-path('story-text-bracket.png'));
-			background-image: url('../images/story-text-bracket.png');
-			background-position: left bottom;
-			max-width: 300px;
-			width: 100%;
-			margin: 0;
-			}
+//			@include mobile-large {
+//			//av background-image: url(asset-path('story-text-bracket.png'));
+//			background-image: url('../images/story-text-bracket.png');
+//			background-position: left bottom;
+//			max-width: 300px;
+//			width: 100%;
+//			margin: 0;
+//			}
 			.inner {
 			background-repeat: no-repeat;
 			//av background-image: url(asset-path('story-text-bracket-mobile.png'));
@@ -1456,16 +1467,16 @@ margin-bottom: 40px;
 			border-top: 5px solid $light-blue;		
 			float: left;
 			margin: 0;
-			padding: 10px 20px;
+			padding: 20px 30px;
 			background-position: left top;
 			background-repeat: no-repeat;
-			@include mobile-large {
-				border-left: 5px solid $light-blue;
-				background-image: url("../images/story-text-bracket.png");
-				background-repeat: no-repeat;
-				border-top: none;
-				padding: 20px;
-			}
+//			@include mobile-large {
+//				border-left: 5px solid $light-blue;
+//				background-image: url("../images/story-text-bracket.png");
+//				background-repeat: no-repeat;
+//				border-top: none;
+//				padding: 20px;
+//			}
 		p {
 			float: left;
 //			padding: 10px 20px;
@@ -1474,11 +1485,11 @@ margin-bottom: 40px;
 //			background-color: #fff;
 //			border-top: 5px solid $light-blue;		
 			white-space: normal;
-			@include mobile-large {
-				border-top: none;
+//			@include mobile-large {
+//				border-top: none;
 //				padding: 20px;
 //				border-left: 5px solid $light-blue;
-			}
+//			}
 			}
 			span {
 			text-align: left;
@@ -1504,11 +1515,11 @@ margin-bottom: 40px;
 		padding: 0;
 		display: flex;
 		margin: 30px auto;
-		@include mobile-large {
+//		@include mobile-large {
 //		max-width: 300px;
-		margin: 0;
-		width: 33%;
-		}
+//		margin: 0;
+//		width: 33%;
+//		}
 		span.year {
 			background: #fff;
 			color: $vermillion;
@@ -1527,7 +1538,7 @@ margin-bottom: 40px;
 	}
 	}
 }
-}
+//}
 
 .row.odd .moment .text-wrapper {
 	background-color: $tan !important;
@@ -1659,45 +1670,101 @@ background: $blue !important;
 min-height: 400px;
 //av background-image: url(asset-path('product-shots/butter-board-base-2.jpg'));
 background-image: url('../images/product-shots/butter-board-base-2.jpg');
+height: 100%;
+background-attachment: none;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 230%;
+float: left;
+width: 100%;
+//min-height: 550px;
+color: #fff;
+	margin-top: -2px;
+@include screen-large {
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
 }
 
 .design-feature.two {
 min-height: 400px;
 //av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/board-topsheet-3.jpg');
+height: 100%;
+background-attachment: none;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 230%;
+float: left;
+width: 100%;
+color: #fff;
+	margin-top: -2px;
+@include screen-large {
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
 }
 
 .design-feature.three {
 min-height: 400px;
 //av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/pow-board-base-2.jpg');
+height: 100%;
+background-attachment: none;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 230%;
+float: left;
+width: 100%;
+color: #fff;
+	margin-top: -2px;
+@include screen-large {
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
 }
 
 .design-feature.four {
 min-height: 400px;
 //av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/butter-board-base-3.jpg');
+height: 100%;
+background-attachment: none;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 230%;
+float: left;
+width: 100%;
+color: #fff;
+	margin-top: -2px;
+@include screen-large {
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
 }
 
 .design-feature.five {
 min-height: 400px;
 //av background-image: url(asset-path('product-shots/board-topsheet-3.jpg'));
 background-image: url('../images/product-shots/fly-base-3.jpg');
+height: 100%;
+background-attachment: none;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 230%;
+float: left;
+width: 100%;
+color: #fff;
+	margin-top: -2px;
+@include screen-large {
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
 }
 
 .am-park {
@@ -1836,32 +1903,48 @@ background: $slate;
 //	}
 	.text {
 		width: 50%;
-		text-align: right;
+		text-align: left;
 		padding: 50px;
+		@include tablet-med-large {
+		text-align: right;
+		}
 		img {
 		max-width: 250px;
-		float: right;
+		float: left;
 		margin: 0 20px;
+		@include tablet-med-large {
+		float: right;
+		}
 		}
 		h3, h4 {
 		max-width: 700px;
-		text-align: right;
+		text-align: left;
 		width: 100%;
-		float: right;
+		float: left;
 		clear: both;
 		color: #332D2B !important;
+		@include tablet-med-large {
+		text-align: right;
+		float: right;
+		}
 		}
 		p {
 		max-width: 700px;
-		text-align: right;
+		text-align: left;
 		width: 100%;
 		float: right;
 		color: #332D2B !important;
+		@include tablet-med-large {
+		text-align: right;
+		}
 		}
 		ul {
-		float: right;
+		float: left;
 		clear: both;
 		padding: 0 0 0 20px;
+		@include tablet-med-large {
+		float: right;
+		}
 		li {
 		text-align: left;
 		max-width: 400px;
@@ -1893,32 +1976,48 @@ background: $slate;
 //	}
 	.text {
 		width: 50%;
-		text-align: right;
+		text-align: left;
 		padding: 50px;
+		@include tablet-med-large {
+		text-align: right;
+		}
 		img {
 		max-width: 250px;
-		float: right;
+		float: left;
 		margin: 0 20px;
+		@include tablet-med-large {
+		float: right;
+		}
 		}
 		h3, h4 {
 		max-width: 700px;
-		text-align: right;
+		text-align: left;
 		width: 100%;
-		float: right;
+		float: left;
 		clear: both;
 		color: #332D2B !important;
+		@include tablet-med-large {
+		text-align: right;
+		float: right;
+		}
 		}
 		p {
 		max-width: 700px;
-		text-align: right;
+		text-align: left;
 		width: 100%;
 		float: right;
 		color: #332D2B !important;
+		@include tablet-med-large {
+		text-align: right;
+		}
 		}
 		ul {
-		float: right;
+		float: left;
 		clear: both;
 		padding: 0 0 0 20px;
+		@include tablet-med-large {
+		float: right;
+		}
 		li {
 		text-align: left;
 		max-width: 400px;
@@ -2680,9 +2779,9 @@ max-width: 600px;
 width: 100%;
 float: left;
 text-align: center;
-@include mobile-large {
-text-align: left;
-}
+//@include mobile-large {
+//text-align: left;
+//}
 .read-more {
 text-align: center;
 margin: 10px auto 0 auto;
