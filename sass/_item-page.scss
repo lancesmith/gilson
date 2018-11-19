@@ -180,9 +180,10 @@ ul.btn-group {
 		display: block;
 		margin: 20px 0;
 		width: 100%;
-		max-width: 320px;
+		max-width: 350px;
 		float: left;
 		display: flex;
+		flex-flow: row wrap;
 		justify-content: flex-start;
 	}
 li {
