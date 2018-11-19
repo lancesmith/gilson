@@ -10,6 +10,19 @@
 .item-wrapper {
 	width: 100%;
 	float: none;
+	margin: 0 auto;
+//	@include screen-large {
+//	width: 70%;
+//	}
+//	@include tablet-med-large {
+//	width: 90%;
+//	}
+//	@include mobile-large {
+//	width: 77%;
+//	}
+//	@include mobile-xsm {
+//	width: 83%;
+//	}
 	@include clearfix;
 	.item-inner {
 		padding: 0 0 80px 0;
@@ -21,9 +34,10 @@
 		}
 		@include clearfix;
 	.item {
-//		width: 100%;
-		min-width: 50%;
+		min-width: 30%;
+		max-width: 300px;
 		float: left;
+		margin: 0 auto;
 		text-align: center;
 	}
 	.name-price-add {
