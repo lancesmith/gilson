@@ -362,26 +362,32 @@
 		height: 100%;
 //		background-attachment: none;
 //		background-position: top;
-		background-size: 200%;
+		background-size: 160%;
 		background-position: center;
 		background-attachment: none;
 		background-repeat: no-repeat;
 //		background-size: 350%;
 		float: left;
 		width: 100%;
-		min-height: 430px;
+		min-height: 350px;
 		color: #fff;
-		@include screen-large {
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		min-height: 550px;
-		}
 		@include mobile-sm {
-		background-size: 220%;
+		background-size: 115%;
 		background-position: center;
 		background-attachment: none;
-		min-height: 500px;
+		min-height: 370px;
+		}
+		@include tablet-med-large {
+		background-size: 105%;
+		background-position: center;
+		background-attachment: none;
+		min-height: 580px;
+		}
+		@include screen-large {
+		background-size: 101%;
+		background-position: center;
+		background-attachment: none;
+		min-height: 680px;
 		}
 		.text-container {
 		margin-top: 80px;
