@@ -101,7 +101,7 @@
 			margin: 0 0 0 45px;
 			outline: none;
 		}
-		button.add-cart {
+		button.add-cart, input.add-cart {
 			background: $vermillion;
 			width: 100%;
 			max-width: 350px;
@@ -169,7 +169,7 @@ ul.btn-group {
 		max-width: 320px;
 		float: left;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 li {
 	display: inline;
