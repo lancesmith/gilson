@@ -1052,7 +1052,7 @@ font-size: .9em;
 
 .shopping-cart-wrapper {
 	width: 100%;
-	max-width: 800px;
+	max-width: 700px;
 	float: none;
 	margin: 0 auto;
 	display: flex;
@@ -1084,16 +1084,17 @@ font-size: .9em;
 	}
 	.shopping-top {
 		float: left;
+        width: 100%;
 		padding: 20px 0 20px 0;
-		margin: 0 20px 20px 0;
+		margin: 0;
 		border-bottom: 1px solid #cdcdcd;
 	.right {
 		float: left;
 		width: 100%;
 		padding: 0;
-		@include mobile-sm {
-		width: 80%;
-		}
+//		@include mobile-sm {
+//		width: 80%;
+//		}
 		input {
 //			height: 20px;
 			width: 30px;
@@ -1121,7 +1122,7 @@ font-size: .9em;
 		input.shopping {
 		color: #fff;
 		width: 100%;
-		max-width: 150px;
+		max-width: 180px;
 		float: none;
 		text-align: center;
 		background: $slate;
@@ -1149,17 +1150,23 @@ font-size: .9em;
 		width: 100%;
 		clear: both;
 		margin: 10px 0;
+		.shopping {
+		float: left !important;
+		text-align: left;
+		}
 		}
 		.gc-wrapper {
 		float: left;
 		width: 100%;
 		clear: both;
 		margin: 10px 0;
+		#apply-coupon {
+		float: left !important;
 		}
-		button, input#remove.shopping, input#update.shopping {
+		}
+		button, input#remove.shopping, input#update.shopping, input#apply-coupon.shopping, input#remove-coupon.shopping {
 		color: #fff;
 		width: auto;
-//		max-width: 150px;
 		float: right;
 		text-align: center;
 		background: $slate;
@@ -1171,10 +1178,13 @@ font-size: .9em;
 		-webkit-border-radius: 5px;
 		cursor: pointer;
 		border: none;
+		clear: both;
 		margin: 0 0 0 5px;
 		&.add-coupon-gc {
 		margin: 0;
 		float: left;
+		background: $light-blue;
+		color: $blue;
 		}
 		}
 		span {
@@ -1201,7 +1211,7 @@ font-size: .9em;
 
 .shopping-bottom {
 	width: 100%;
-	padding: 0 15px 0 0;
+	padding: 0;
 	float: left;
 	.totals {
 	padding: 0 0 20px 0;
@@ -1221,7 +1231,7 @@ font-size: .9em;
 		height: auto;
 	}
 	fieldset {
-		float: right;
+		float: left;
 		margin: 10px 0 0 0;
 		clear: both;
 	button {
@@ -1229,10 +1239,13 @@ font-size: .9em;
 	}
 	}
 	input {
-//		height: 20px;
-		font-size: .9em;
-		margin: 0 0 0 7px;
-		float: right;
+	font-size: .9em;
+	margin: 7px 0 7px 0 !important;
+	float: left;
+	clear: both;
+	text-align: left;
+	width: 100%;
+	max-width: 180px;
 	}
 	span {
 		margin: 0 0 20px 0;
@@ -1389,9 +1402,9 @@ button {
 	max-width: 1200px;
 //	@include screen-large {
 //	padding: 80px 0;
-//	p {
-//		white-space: pre-wrap;
-//	}
+	p {
+		white-space: pre-wrap;
+	}
 	}
 }
 .timeline-wrapper {
@@ -2834,6 +2847,7 @@ width: 100%;
 margin: 0 auto;
 button {
 background: $vermillion;
+width: 350px;
 &:hover {
 background: $blue;
 }
