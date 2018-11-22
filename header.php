@@ -60,4 +60,9 @@
 <div class="shopping-cart fas fa-shopping-cart">
   <a href="shopping-cart.php">Shopping Cart</a>
 </div>  
+<div class="special-message">
+<span class="close-offer">X</span>
+<h6>Use code <strong>TURKEY18</strong> to receive $75 off your Snowboard or Ski purchase through 11:59pm Friday</h6>
 </div>
+</div>
+

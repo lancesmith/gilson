@@ -57,6 +57,17 @@ $('.dropdown-toggle').attr('data-toggle',"dropdown");
 }
 });
 
+//span close on offer banner
+//$('.special-message').click(function () {
+//$(this).addClass('close');
+//});
+
+$('span.close-offer').click(function () {
+$(this).addClass('close');
+$('.special-message').addClass('close');
+});
+
+
 //accordion style for FAQ
 $('.accordion button').click(function () {
 $(this).find('i.fas').toggleClass('fa-plus fa-minus');
