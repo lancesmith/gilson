@@ -2901,3 +2901,37 @@ float: none;
 }
 }
 
+.cool-stuff-wrapper {
+	margin: 0 0 80px 0;
+ul {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	li {
+		width: 320px;
+		text-align: center;
+		margin: 0 0 20px 0;
+		background: #fff;
+		padding: 20px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border: 1px solid #cdcdcd;
+		h6 {
+		text-decoration: none;
+		padding: 20px 0;
+		border-top: 5px solid $vermillion;
+		margin-top: 20px;
+		color: $blue;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			margin: auto;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+}
